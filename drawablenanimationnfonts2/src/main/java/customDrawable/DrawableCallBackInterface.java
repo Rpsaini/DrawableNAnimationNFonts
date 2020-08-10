@@ -1,4 +1,4 @@
-package com.app.drawablenanimationnfonts;
+package customDrawable;
 
 import android.graphics.drawable.GradientDrawable;
 
