@@ -6,27 +6,26 @@ import android.util.AttributeSet;
 
 import androidx.appcompat.widget.AppCompatTextView;
 
-public class CustomFonts extends AppCompatTextView
+public class CustomTextViewFonts extends AppCompatTextView
 {
 
     private static Typeface RobotoTextView;
-    private String fontName="";
 
-    public CustomFonts(Context context,String fontName)
+
+    public CustomTextViewFonts(Context context)
     {
         super(context);
-        this.fontName=fontName;
         if (isInEditMode()) return; //Won't work in Eclipse graphical layout
         setTypeface();
     }
 
-    public CustomFonts(Context context, AttributeSet attrs) {
+    public CustomTextViewFonts(Context context, AttributeSet attrs) {
         super(context, attrs);
         if (isInEditMode()) return;
         setTypeface();
     }
 
-    public CustomFonts(Context context, AttributeSet attrs, int defStyle) {
+    public CustomTextViewFonts(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         if (isInEditMode()) return;
         setTypeface();
@@ -34,7 +33,7 @@ public class CustomFonts extends AppCompatTextView
 
     private void setTypeface() {
         if (RobotoTextView == null) {
-            RobotoTextView = Typeface.createFromAsset(getContext().getAssets(), fontName);
+            RobotoTextView = Typeface.createFromAsset(getContext().getAssets(), DefineYourAppFont.fontName);
         }
         setTypeface(RobotoTextView);
     }
