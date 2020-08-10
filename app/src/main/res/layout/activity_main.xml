@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,22 +7,36 @@
     android:orientation="vertical"
     tools:context="com.app.drawablenanimationnfonts.MainActivity">
 
-    <TextView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/circleDrawable"
-        ></TextView>
 
 
-    <TextView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/squareDrawable"
-        ></TextView>
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/BottomView"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        >
 
 
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+            <TextView
+                android:background="@color/colorAccent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/textViewOnclick"
+                ></TextView>
     <EditText
+        android:visibility="gone"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -31,6 +45,9 @@
         android:id="@+id/editTextBorder"
         ></EditText>
 
+
+
+        </RelativeLayout>
 
 
     <Button
@@ -43,16 +60,16 @@
         ></Button>
 
 
-    <com.app.drawablenanimationnfonts.CustomFonts
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Testing text"
         android:gravity="center"
         android:layout_marginTop="20dp"
         android:textSize="20dp"
-        ></com.app.drawablenanimationnfonts.CustomFonts>
+        ></TextView>
+
+    </LinearLayout>
 
 
-
-
-</LinearLayout>
+</RelativeLayout>
