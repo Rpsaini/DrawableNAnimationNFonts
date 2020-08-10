@@ -9,7 +9,7 @@ import androidx.appcompat.widget.AppCompatTextView;
 public class CustomFonts extends AppCompatTextView
 {
 
-    private  Typeface RobotoTextView;
+    private static Typeface RobotoTextView;
     private String fontName="";
 
     public CustomFonts(Context context,String fontName)
