@@ -1,0 +1,2 @@
+include ':app', ':drawablenanimationnfonts2'
+rootProject.name='DrawableNAnimationNFonts'
