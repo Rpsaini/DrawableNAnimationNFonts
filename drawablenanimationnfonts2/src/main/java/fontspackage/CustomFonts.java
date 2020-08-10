@@ -6,13 +6,14 @@ import android.util.AttributeSet;
 
 import androidx.appcompat.widget.AppCompatTextView;
 
-public class CustomFonts extends AppCompatTextView {
+public class CustomFonts extends AppCompatTextView
+{
 
     private  Typeface RobotoTextView;
     private String fontName="";
+
     public CustomFonts(Context context,String fontName)
     {
-
         super(context);
         this.fontName=fontName;
         if (isInEditMode()) return; //Won't work in Eclipse graphical layout
