@@ -1,32 +1,35 @@
-package fontspackage;
+package fontpackageforEdittext;
 
 import android.content.Context;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
-import androidx.appcompat.widget.AppCompatButton;
+
 import androidx.appcompat.widget.AppCompatEditText;
 
+import fontspackageForTextView.DefineYourAppFont;
 
-public class CustomEdittextView extends AppCompatEditText
+
+
+public class Italic extends AppCompatEditText
 {
 
     private static Typeface typefaceEdittext;
 
 
-    public CustomEdittextView(Context context)
+    public Italic(Context context)
     {
         super(context);
         if (isInEditMode()) return; //Won't work in Eclipse graphical layout
         setTypeface();
     }
 
-    public CustomEdittextView(Context context, AttributeSet attrs) {
+    public Italic(Context context, AttributeSet attrs) {
         super(context, attrs);
         if (isInEditMode()) return;
         setTypeface();
     }
 
-    public CustomEdittextView(Context context, AttributeSet attrs, int defStyle) {
+    public Italic(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         if (isInEditMode()) return;
         setTypeface();
@@ -34,7 +37,7 @@ public class CustomEdittextView extends AppCompatEditText
 
     private void setTypeface() {
         if (typefaceEdittext == null) {
-            typefaceEdittext = Typeface.createFromAsset(getContext().getAssets(), DefineYourAppFont.fontName);
+            typefaceEdittext = Typeface.createFromAsset(getContext().getAssets(), DefineYourAppFont.fontNameItalic);
         }
         setTypeface(typefaceEdittext);
     }

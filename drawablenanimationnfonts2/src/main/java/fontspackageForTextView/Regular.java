@@ -1,4 +1,5 @@
-package fontspackage;
+package fontspackageForTextView;
+
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -6,26 +7,26 @@ import android.util.AttributeSet;
 
 import androidx.appcompat.widget.AppCompatTextView;
 
-public class CustomTextViewFonts extends AppCompatTextView
+public class Regular extends AppCompatTextView
 {
 
     private static Typeface RobotoTextView;
 
 
-    public CustomTextViewFonts(Context context)
+    public Regular(Context context)
     {
         super(context);
         if (isInEditMode()) return; //Won't work in Eclipse graphical layout
         setTypeface();
     }
 
-    public CustomTextViewFonts(Context context, AttributeSet attrs) {
+    public Regular(Context context, AttributeSet attrs) {
         super(context, attrs);
         if (isInEditMode()) return;
         setTypeface();
     }
 
-    public CustomTextViewFonts(Context context, AttributeSet attrs, int defStyle) {
+    public Regular(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         if (isInEditMode()) return;
         setTypeface();
@@ -33,7 +34,7 @@ public class CustomTextViewFonts extends AppCompatTextView
 
     private void setTypeface() {
         if (RobotoTextView == null) {
-            RobotoTextView = Typeface.createFromAsset(getContext().getAssets(), DefineYourAppFont.fontName);
+            RobotoTextView = Typeface.createFromAsset(getContext().getAssets(), DefineYourAppFont.fontNameRegular);
         }
         setTypeface(RobotoTextView);
     }
